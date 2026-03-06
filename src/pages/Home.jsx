@@ -48,7 +48,7 @@ function Home() {
               James&nbsp;Ward
             </h1>
             <div className="flex gap-3 mb-8 stagger">
-              {['Developer', 'Designer', 'Author'].map((word, i) => (
+              {['Developer', 'Creator', 'Author'].map((word, i) => (
                 <span
                   key={word}
                   className={`fade-up text-sm md:text-base font-medium px-4 py-1.5 rounded-full border backdrop-blur-sm ${

@@ -23,7 +23,7 @@ function About() {
           />
           <div>
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">James Ward</h1>
-            <p className="text-slate-300">Software Engineer, Game Designer, Author</p>
+            <p className="text-slate-300">Software Engineer, Creator, Author</p>
             <p className="text-sm text-slate-500 mt-1">Salt Lake City, UT</p>
           </div>
         </div>
