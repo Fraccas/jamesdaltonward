@@ -170,13 +170,16 @@ function Home() {
 
       {/* Projects & Studios */}
       <section className="relative py-24 px-6 overflow-hidden">
-        <div className="gradient-divider" />
         <div className="orb orb-violet orb-drift w-[500px] h-[500px] left-1/4 top-10" />
         <div className="orb orb-indigo orb-drift-slow w-[400px] h-[400px] right-10 bottom-0" />
         <div className="relative max-w-5xl mx-auto">
-          <p className="text-center text-xs text-slate-500 uppercase tracking-[0.2em] mb-14">
+          <h2 className="gradient-title text-center text-2xl md:text-3xl font-bold mb-4">
             Projects & Studios
+          </h2>
+          <p className="text-center text-slate-400 mb-12 max-w-lg mx-auto">
+            Indie studios and products I've built from the ground up.
           </p>
+          <div className="gradient-divider mb-12" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { src: watashiLogo, name: 'Watashi Games', href: 'https://watashigames.com/', desc: 'Indie game studio — My Suika, Damashi Game, Watashi Colorizer' },
@@ -190,12 +193,12 @@ function Home() {
                 rel="noopener noreferrer"
                 className="glass-card glow-border rounded-2xl p-6 flex flex-col items-center text-center gap-4 group"
               >
-                <div className="h-20 flex items-center">
-                  <img src={src} alt={name} className="max-h-full max-w-[140px] object-contain rounded-lg" />
+                <div className="h-24 flex items-center">
+                  <img src={src} alt={name} className="max-h-full max-w-[160px] object-contain rounded-lg" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-white mb-1 group-hover:text-indigo-300 transition-colors">{name}</h3>
-                  <p className="text-xs text-slate-500 leading-relaxed">{desc}</p>
+                  <h3 className="text-base font-semibold text-white mb-1.5 group-hover:text-indigo-300 transition-colors">{name}</h3>
+                  <p className="text-sm text-slate-400 leading-relaxed">{desc}</p>
                 </div>
               </a>
             ))}

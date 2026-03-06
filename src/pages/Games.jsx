@@ -1,6 +1,6 @@
-import fracctalCapsule from '../assets/games/fracctal-capsule.webp'
-import fracctalMonsters from '../assets/games/fracctal-monsters.webp'
-import fracctalMonstersPromo from '../assets/games/fracctal-monsters-promo.webp'
+import fracctalTcgVert from '../assets/games/fracctal-tcg-vert.webp'
+import fracctalMonstersVert from '../assets/games/fracctal-monsters-vert.webp'
+import fracctalMonstersHero from '../assets/games/fracctal-monsters-hero.webp'
 import damashiLogo from '../assets/games/damashi-logo.webp'
 import damashiPanel from '../assets/games/damashi-panel.webp'
 import watashiLogo from '../assets/games/watashi-logo.webp'
@@ -78,8 +78,8 @@ const studios = [
           'Company valued at $2.5M in last funding round',
           'Led multidisciplinary team of artists, developers, and community moderators',
         ],
-        image: fracctalMonsters,
-        secondaryImage: fracctalMonstersPromo,
+        image: fracctalMonstersVert,
+        secondaryImage: fracctalMonstersHero,
         tags: ['Node.js', 'Angular', 'SQL', 'Algorand', 'Blockchain'],
       },
       {
@@ -91,7 +91,7 @@ const studios = [
           'Real-time multiplayer with deck building and card collection',
           'Built with Unity (C#/.NET) and full-stack web backend',
         ],
-        image: fracctalCapsule,
+        image: fracctalTcgVert,
         trailer: 'kpWsfmRJOVw',
         tags: ['Unity', 'C#', 'Node.js', 'Angular', 'SQL', 'Steam', 'iOS', 'Android'],
       },
@@ -136,8 +136,8 @@ function Games() {
                   className="glass-card glow-border rounded-2xl overflow-hidden"
                 >
                   {/* Image header */}
-                  {(image || secondaryImage) && (
-                    <div className={`grid ${secondaryImage ? 'md:grid-cols-2' : ''}`}>
+                  {(image || secondaryImage || trailer) && (
+                    <div className={`grid ${(secondaryImage || trailer) ? 'md:grid-cols-2' : ''}`}>
                       {image && (
                         <div className="h-56 md:h-72 overflow-hidden bg-slate-900 flex items-center justify-center p-6">
                           <img
@@ -147,7 +147,18 @@ function Games() {
                           />
                         </div>
                       )}
-                      {secondaryImage && (
+                      {trailer ? (
+                        <div className={`${image ? 'hidden md:block' : ''} h-56 md:h-72 overflow-hidden bg-slate-900 relative`}>
+                          <iframe
+                            className="absolute inset-0 w-full h-full"
+                            src={`https://www.youtube-nocookie.com/embed/${trailer}`}
+                            title={`${title} Trailer`}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : secondaryImage ? (
                         <div className={`${image ? 'hidden md:block' : ''} h-56 md:h-72 overflow-hidden bg-slate-900`}>
                           <img
                             src={secondaryImage}
@@ -155,23 +166,7 @@ function Games() {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                      )}
-                    </div>
-                  )}
-
-                  {/* Trailer */}
-                  {trailer && (
-                    <div className="px-8 pt-8">
-                      <div className="relative w-full rounded-xl overflow-hidden" style={{ paddingBottom: '56.25%' }}>
-                        <iframe
-                          className="absolute inset-0 w-full h-full"
-                          src={`https://www.youtube-nocookie.com/embed/${trailer}`}
-                          title={`${title} Trailer`}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          loading="lazy"
-                        />
-                      </div>
+                      ) : null}
                     </div>
                   )}
 
