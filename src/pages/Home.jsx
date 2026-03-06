@@ -40,7 +40,7 @@ function Home() {
         {/* Background hero image */}
         <div className="absolute inset-0">
           <img src={heroBackground} alt="" fetchPriority="high" className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-slate-950/60" />
+          <div className="absolute inset-0 bg-slate-950/70" />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/40 to-slate-950/90" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/60" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,_rgba(99,102,241,0.15),_transparent)]" />
@@ -48,7 +48,7 @@ function Home() {
 
         <div className="relative z-10 max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center py-24">
           <div className="fade-up">
-            <h1 className="hero-name text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8">
+            <h1 className="hero-name text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               James&nbsp;Ward
             </h1>
             <div className="flex gap-3 mb-8 stagger">
@@ -67,7 +67,7 @@ function Home() {
                 </span>
               ))}
             </div>
-            <p className="text-slate-400 mb-10 max-w-lg leading-relaxed text-lg">
+            <p className="text-slate-400 mb-10 max-w-lg leading-relaxed text-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
               Software engineer by trade. Indie game studio founder.
               Published author. AT thru-hiker.
             </p>
