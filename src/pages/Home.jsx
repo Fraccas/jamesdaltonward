@@ -6,6 +6,7 @@ import watashiLogo from '../assets/games/watashi-logo.webp'
 import suikaCapsule from '../assets/games/suika-capsule.webp'
 import naomiSplit from '../assets/games/naomi-split.webp'
 import headshot from '../assets/personal/headshot.webp'
+import heroBackground from '../assets/games/fracctal-monsters-hero.webp'
 
 const highlights = [
   {
@@ -36,10 +37,13 @@ function Home() {
     <>
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center px-6 overflow-hidden">
-        {/* Background mesh gradient */}
+        {/* Background hero image */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,_rgba(99,102,241,0.12),_transparent)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_60%,_rgba(139,92,246,0.06),_transparent)]" />
+          <img src={heroBackground} alt="" fetchPriority="high" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-slate-950/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/40 to-slate-950/90" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/60" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,_rgba(99,102,241,0.15),_transparent)]" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center py-24">
@@ -88,26 +92,31 @@ function Home() {
             <img
               src={bookCover}
               alt="Trail Family"
+              loading="lazy"
               className="float-1 absolute w-44 top-0 left-8 rounded-xl shadow-2xl shadow-black/60 border border-white/[0.06]"
             />
             <img
               src={suikaCapsule}
               alt="My Suika"
+              loading="lazy"
               className="float-2 absolute w-40 top-12 right-4 rounded-xl shadow-2xl shadow-black/60 border border-white/[0.06]"
             />
             <img
               src={damashiLogo}
               alt="Damashi Game"
+              loading="lazy"
               className="float-3 absolute w-36 bottom-20 left-12 rounded-xl shadow-2xl shadow-black/60 border border-white/[0.06]"
             />
             <img
               src={fracctalCapsule}
               alt="Fracctal TCG"
+              loading="lazy"
               className="float-4 absolute w-52 bottom-0 right-0 rounded-xl shadow-2xl shadow-black/60 border border-white/[0.06]"
             />
             <img
               src={headshot}
               alt="James Ward"
+              loading="lazy"
               className="pulse-glow absolute w-28 h-28 rounded-full object-cover border-2 border-indigo-400/30 z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             />
           </div>
@@ -152,6 +161,7 @@ function Home() {
                 <img
                   src={image}
                   alt={title}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
@@ -194,7 +204,7 @@ function Home() {
                 className="glass-card glow-border rounded-2xl p-6 flex flex-col items-center text-center gap-4 group"
               >
                 <div className="h-24 flex items-center">
-                  <img src={src} alt={name} className="max-h-full max-w-[160px] object-contain rounded-lg" />
+                  <img src={src} alt={name} loading="lazy" className="max-h-full max-w-[160px] object-contain rounded-lg" />
                 </div>
                 <div>
                   <h3 className="text-base font-semibold text-white mb-1.5 group-hover:text-indigo-300 transition-colors">{name}</h3>
