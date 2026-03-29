@@ -46,9 +46,10 @@ function About() {
         </p>
         <p>
           I run two indie studios — Fracctal Labs and Watashi Games — and
-          currently work as a Software Engineer II at GoEngineer. When I'm not
-          coding, I'm snowboarding, skateboarding, or out on a trail with my
-          family.
+          currently work as a Software Engineer II at GoEngineer. Beyond games,
+          I'm building AI-powered tools like Watashi Marketing and Watashi
+          Colorizer. When I'm not coding, I'm snowboarding, skateboarding, or
+          out on a trail with my family.
         </p>
       </div>
 
@@ -91,6 +92,8 @@ function About() {
                 { label: 'LinkedIn', href: 'https://www.linkedin.com/in/jamesdaltonward/' },
                 { label: 'Watashi Games', href: 'https://watashigames.com/' },
                 { label: 'Fracctal TCG', href: 'https://fracctaltcg.com/' },
+                { label: 'Watashi Marketing', href: 'https://watashimarketing.com/' },
+                { label: 'Watashi Colorizer', href: 'https://watashicolorizer.com/' },
               ].map(({ label, href }) => (
                 <a
                   key={label}

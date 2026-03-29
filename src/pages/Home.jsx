@@ -195,6 +195,8 @@ function Home() {
               { src: watashiLogo, name: 'Watashi Games', href: 'https://watashigames.com/', desc: 'Indie game studio — My Suika, Damashi Game, Watashi Colorizer' },
               { src: damashiLogo, name: 'Damashi Game', href: 'https://store.steampowered.com/app/3248500/Damashi_Game/', desc: 'Dark survival thriller webtoon and video game' },
               { src: fracctalCapsule, name: 'Fracctal Labs', href: 'https://fracctaltcg.com/', desc: 'Fracctal Monsters, Fracctal TCG — blockchain gaming studio' },
+              { src: watashiLogo, name: 'Watashi Marketing', href: 'https://watashimarketing.com/', desc: 'AI-powered marketing automation platform for creators' },
+              { src: watashiLogo, name: 'Watashi Colorizer', href: 'https://watashicolorizer.com/', desc: 'AI manga & webtoon colorization tool' },
             ].map(({ src, name, href, desc }) => (
               <a
                 key={name}

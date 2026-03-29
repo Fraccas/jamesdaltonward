@@ -60,7 +60,25 @@ const studios = [
         ],
         image: watashiLogo,
         secondaryImage: naomiSplit,
+        storeLinks: [
+          { label: 'Website', href: 'https://watashicolorizer.com/' },
+        ],
         tags: ['React', 'Node.js', 'AI'],
+      },
+      {
+        title: 'Watashi Marketing',
+        status: 'In Development',
+        desc: 'An AI-powered marketing automation platform for creators. Automates social media, SEO audits, content generation, and analytics.',
+        stats: [
+          'AI-driven social media post generation and scheduling',
+          'Automated Lighthouse and Schema.org audits',
+          'Built with React, Node.js, and Google Gemini AI',
+        ],
+        image: watashiLogo,
+        storeLinks: [
+          { label: 'Website', href: 'https://watashimarketing.com/' },
+        ],
+        tags: ['React', 'Node.js', 'AI', 'Tailwind CSS'],
       },
     ],
   },
